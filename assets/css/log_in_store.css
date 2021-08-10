@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+
+.container {
+   
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding-top: 10%;
+    background-color: rgb(242, 247, 248);
+
+    transform: translateX(50%);
+}
+form {
+    align-items: center;
+    justify-content: center;
+    padding-left:20% ;
+    /* padding: 5%; */
+}
+label { 
+	display:block;
+
+	/* font-family: Ubuntu; */
+    font-family: 'Nunito', sans-serif;
+
+	font-size: 23px;
+ 
+	font-weight: bolder;
+}
+form {
+	background: linear-gradient(120deg, aqua, purple);
+	/* padding:  45px; */
+	width: 400px;
+	color: transparent;
+	background-clip: text;
+    /* padding:5%; */
+}
+/* input {
+	padding: 12px 4px;
+	color: transparent;
+	width: 400px;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid black;
+} */
+input[placeholder]{
+	color: rgb(46, 83, 219);
+	font-family: Ubuntu;
+}
+input {
+    padding: 12px;
+    border: none;
+
+    outline: none;
+    border-bottom: 2px solid rgb(93, 119, 214);
+    padding: 12px;
+    color: transparent;
+    background: transparent;
+}
+
+button {
+    width: 35%;
+    padding: 3% ;
+    align-items: center;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 5px;
+    transform: translateX(50%);
+}
+.foot {
+    background: linear-gradient(120deg, aqua, purple);
+    font-size: 340%;
+    /* display: flex; */
+    align-items: center;  
+    /* transform: translateX(35%); */
+    width: 43%;
+    /* /* padding-left: 10%; *position */
+    position: absolute;
+    left: 25.5%;
+    padding-left:90px;
+}
+h1 {
+    transform: translateX(10%);
+    padding: 10%;
+    font-family: 'Nunito', sans-serif;
+
+}
+.alt {
+    padding: 22px;
+}
+
+a {
+    text-decoration: none;
+}
+body {
+    background: linear-gradient(120deg, aqua, purple);
+}
