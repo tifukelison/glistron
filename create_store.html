@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create store</title>
+    <link rel="stylesheet" href="assets/css/create_store.css">
+</head>
+<body>
+    <div class="container">
+        <div class="head"> <h1>Create Your Ideal Store</h1></div>
+        <form action="#">
+            <label>User ID</label>
+            <input type="text" name="userId" id="userId" placeholder="userID"><br><br>
+             <label>Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter your emial"><br><br>
+             <label>Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter Store Password"><br><br>
+            <label for="store">Store Name:</label>
+            <input type="text" placeholder="Store name" class="store_name"><br><br>
+
+            <label for="store pass">Store Description:</label>
+            <input type="text" class="store_description" placeholder="Store Description"><br><br>
+
+            <label for="location">Location:</label>
+            <input type="text" class="store_location" placeholder="Store Location e.g Douala, Yaounde etc."><br><br>
+
+
+            <label for="tel">Phone Number:</label>
+            <input type="tel" class="store_number" placeholder="Enter your phone number"><br><br>
+
+            <label for="category">Category:</label>
+            <input class="category" type="text" placeholder="Category (Maximum 3)."><br>
+            <label for="category"> <span>E.g Cars, Fashion, Pastries, Computers, Accessories etc.</span> </label><br><br>
+
+            <label for="file">STORE LOGO:</label><br>
+            <input type="file" class="store_logo"><br><br>
+
+            <button class="createStoreBtn">Create Store</button><br><br>
+
+            <div class="alt">Already have a Store? <a href="log-in-store.html">Login</a></div>
+        </form>
+        
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
+<script type="text/javascript">
+  // Your web app's Firebase configuration
+
+  var firebaseConfig = {
+
+    apiKey: "AIzaSyBQUKunsqV8lK_TNzcZQBu5U7UDXMspdd8",
+
+    authDomain: "glistronv2.firebaseapp.com",
+
+    projectId: "glistronv2",
+
+    storageBucket: "glistronv2.appspot.com",
+
+    messagingSenderId: "622683501491",
+
+    appId: "1:622683501491:web:3fb4b3efc5ba17c49291c6"
+
+  };
+
+  // Initialize Firebase
+
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+<script type="text/javascript" src="assets/js/createStore.js"></script>
+</body>
+</html>
