@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+* {
+	margin: 0;
+}
+
+.grid {
+	padding: 13px;
+}
+
+.system {
+display: grid;
+grid-template-columns: 153px auto auto;
+}
+
+.grid-system2 {
+	grid-column: 1/2;
+	grid-row: 1/4;
+}
+.side_bar {
+	background: oldlace;
+	border-radius: 20px;
+	width: 150px;
+}
+.side_bar img {
+	width: 100px;
+	padding: 12px;
+	margin: 12px 3px 12px 12px;
+}
+.grid-system3 {
+	grid-column: 2/4;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.list li {
+	list-style: none;
+	padding: 12px 3px;
+	margin: 52px 0;
+	color: wheat;
+}
+.list li a {
+	text-decoration: none;
+	color: #333333;
+}
+.list li:active{
+	transition: 500ms;
+	padding: 12px 3px;
+	/* margin: 52px 0; */
+	border-radius: 12px 0 0 12px;
+	background: white;
+}
+.grid-system1{
+	grid-column: 2/4;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px;
+}
+.grid-system1 .search_bar {
+	padding: 12px;
+}
+.search {
+	border:  none;
+	padding: 9px;
+	border-radius: 20px 0 0 20px;
+	background: wheat;
+	margin-left: 32px;
+}
+.search_bar input {
+	padding: 9.5px 32px 8px 32px;
+	border-radius: 0px 20px 20px 0px;
+	border: none;
+	font-family: 'Nunito', sans-serif;
+	outline: none;
+	margin-left: -6px;
+	background: wheat;
+}
+.settings_profile {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	
+}
+.settings_profile a, .profile {
+	margin: 0px 19px;
+	font-family: 'Nunito', sans-serif;
+}
+.welcome {
+	background: url('https://wallpaperaccess.com/full/1155122.jpg');
+     background-size: contain;
+     background-clip: text;
+     color: transparent;
+     font-family: Nunito;
+     font-size: 23px;
+     padding: 12px;
+}
+.flexd {
+	display: flex;
+	justify-content: space-around;
+}
+.shift_welcome {
+	width: 500px;
+	margin: 22px 35px;
+	box-shadow: 0 0 12px 3px wheat;
+	border-radius: 23px;
+	background: wheat;
+}
+.flexd a {
+	color:  rebeccapurple;
+}

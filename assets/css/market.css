@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+
+html, body {
+  background: #fafafa;
+  color: #1BBBFB;
+  font-family: sans-serif;
+}
+.search_icon, .dots_icon, .drawer_icon {
+  cursor: pointer;
+}
+.search-bar {
+  position: relative;
+  transition: 1s;
+opacity: 0;
+}
+.search-bar input{
+  padding: 4px 23px;
+  outline: none;
+
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid white;
+}
+.search-bar input[placeholder] {
+  color: white;
+font-family: 'Atkinson Hyperlegible', sans-serif;
+
+}
+.search-barpop {
+  transition: 1s;
+  position: relative;
+  opacity: 1;
+}
+.shift {
+  display: none;
+transition: 1.2s;
+  padding: 12px;
+  margin: 23px 10px 20px 0;
+  right: 10px;
+  top: 24px;
+  z-index: 1;
+  width: 190px;
+  position: absolute;
+}
+.displaydots {
+  display: block;
+  transition: 1.2s;
+}
+#page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#toolbar {
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: linear-gradient(120deg, rebeccapurple, wheat);
+  padding: 0 16px;
+}
+
+#actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 64px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#actions .icon {
+  padding: 7px;
+  margin: 2px;
+  vertical-align: middle;
+}
+
+#actions .spacer {
+  flex: 1;
+}
+
+#actions svg {
+  display: inline-block;
+  pointer-events: none;
+  position: relative;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+#title {
+  padding: 21px;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  position: relative;
+  padding: 24px;
+}
+
+.card {
+  display: block;
+  position: relative;
+  width: 60%;
+  height: 100px;
+  border: 1px solid #1BBBFB;
+  -webkit-border-radius: 4px; 
+  -moz-border-radius: 4px;   
+  border-radius: 4px;
+  background-color: #fff;
+  margin: 16px auto;
+  padding: 24px;
+}
+.drawer h1{
+  overflow: hidden; 
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; 
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent;}
+  50% { border-color: orange; }
+}
+
+.drawer {
+   margin: 373px 0px 0px -900px;
+
+  z-index: 1;
+  background: #333333;
+
+}
+.showDrawer{
+  transition: 1.2s;
+ margin: 373px 0px 0px 0px;
+   z-index: 1;
+  background: #333333;
+}
+.drawer .p-3:hover  {
+  transition: 1.2s;
+
+  background: rgba(0, 0, 0, 0.4);
+
+}
+

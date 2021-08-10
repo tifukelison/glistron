@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href= 
+	"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<link rel="stylesheet" type="text/css" href="assets/css/signup.css">
+
+</head>
+<body>
+	<div id="blurry"></div>
+	<div class="blackbox"></div>
+	<div class="coverBox">
+		<h1>Hello 😚😚😚😚</h1>
+       <p>Welcome to Glistron!!!</p>
+       <p>This is a place where someone, somewhere needs what you have and I'm guessing you too need something. 😎😎😎</p>
+       <p>Please Note that you only pay for your item when seen by you ok!!!</p>
+	</div>
+	<div class="container">
+
+		<div class="left">
+			<h1>Sign In To Glistron</h1>
+			<form action="#">
+                 <small></small>
+				<label for="email">E-mail</label>
+
+				<input type="email" name="e-mail" placeholder="Enter your email" class="login_email" >
+		
+			
+				<label for="password">Password</label>
+				<input   type="password" name="password"  placeholder="Enter your Password" class="login_password">
+			
+			<div>	
+				<button class="sign_btn" onclick="login();">Sign In</button>
+			</div><br>
+			<div class="sign_up">
+				<div class="text"> Don't have an account <a href="#" class="swap">Sign Up</a></div> 
+			</div>
+			</form>
+		
+		</div>
+		 <div class="right">
+			<h1>Create Account</h1>
+		
+				<label for="name">Name</label>
+				<input type="text" placeholder="Enter your name" class="name">
+			
+			
+				<label for="email">E-mail</label>
+				<input type="email" name="e-mail" placeholder="example@gmail.com" class="createEmail">
+			
+			
+				<label for="password">Password</label>
+				<input   type="password" name="password"  placeholder="Enter your Password" class="createPass">
+			
+		
+			
+				<label for="password">Confirm Password</label>
+				<input   type="password" name="password"  placeholder="Enter your again Password">
+			<div>	
+				<button class="signup_btn" onclick="signup();">Sign Up</button>
+			</div><br>
+			<div class="sign_up">
+				<div class="text">Already have an account??? <a href="#" class="swap2" >Sign In</a></div> 
+				
+			</div>
+		 </div>
+		</div>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+
+<script>
+
+  // Your web app's Firebase configuration
+
+  var firebaseConfig = {
+
+    apiKey: "AIzaSyBQUKunsqV8lK_TNzcZQBu5U7UDXMspdd8",
+
+    authDomain: "glistronv2.firebaseapp.com",
+
+    projectId: "glistronv2",
+
+    storageBucket: "glistronv2.appspot.com",
+
+    messagingSenderId: "622683501491",
+
+    appId: "1:622683501491:web:3fb4b3efc5ba17c49291c6"
+
+  };
+
+  // Initialize Firebase
+
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+<script type="text/javascript" src="assets/js/signIn.js"></script>
+</body>
+</html>
