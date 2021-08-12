@@ -50,3 +50,10 @@ const logOut = () => {
 }
 
 
+
+
+function openHomeDrawer() {
+  console.log("works")
+  const menu = document.querySelector('.unstyled');
+  menu.classList.toggle('styled')
+}

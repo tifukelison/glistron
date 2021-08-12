@@ -12,18 +12,52 @@
         <h1>Login To Your Store</h1>
 
         <form action="#">
-            <input type="text" placeholder="Store name or phone number"><br><br>
+            <input type="text" class="name" placeholder="Store name or phone number"><br><br>
 
-            <input type="text" placeholder="Store Password"><br><br>
+            <input type="email" class="email" placeholder="Store email"><br><br>
 
             <input type="checkbox" id="remember me" name="remember me" value="remember me">
             <label for="remember me"> Remember me</label><br><br>
 
-            <button>Log In</button>
-            <div class="alt">Don't have a Store Yet? <a href="/create store/index.html">Create Store</a></div>
+            <button onclick="writeUserData">Log In</button>
+            <div class="alt">Don't have a Store Yet? <a href="create_store.html">Create Store</a></div>
 
 
         </form>
     </div>
+     <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
+<script type="text/javascript">
+  // Your web app's Firebase configuration
+
+  var firebaseConfig = {
+
+    apiKey: "AIzaSyBQUKunsqV8lK_TNzcZQBu5U7UDXMspdd8",
+
+    authDomain: "glistronv2.firebaseapp.com",
+
+    projectId: "glistronv2",
+
+    storageBucket: "glistronv2.appspot.com",
+
+    messagingSenderId: "622683501491",
+
+    appId: "1:622683501491:web:3fb4b3efc5ba17c49291c6"
+
+  };
+
+  // Initialize Firebase
+
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+    <script type="text/javascript" src="assets/js/login_store.js"></script>
 </body>
 </html>

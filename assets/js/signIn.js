@@ -20,12 +20,14 @@ const signup = () => {
 let name_input = document.querySelector('.name')
 let createUserEmail = document.querySelector('.createEmail').value;
 let createUserPass = document.querySelector('.createPass').value;
-firebase.auth().createUserWithEmailAndPassword(createUserEmail, createUserPass)
+let confirmUserPass = document.querySelector('.confirmUserPass').value;
+if (createUserPass === confirmUserPass && createUserPass.length >= 6) {
+  firebase.auth().createUserWithEmailAndPassword(createUserEmail, createUserPass)
   .then((userCredential) => {
     // Signed in 
     var user = userCredential.user;
     console.log(user)
-    function writeUserData(userId, name_input, createUserEmail){
+    function writeUserData(name_input, createUserEmail){
       console.log('works')
   firebase.database().ref('users/' + userId).set({
     username: name_input,
@@ -39,6 +41,10 @@ firebase.auth().createUserWithEmailAndPassword(createUserEmail, createUserPass)
     var errorMessage = error.message;
     // ..
   });
+}else {
+  return false
+}
+
 };
 
 const login = () => {

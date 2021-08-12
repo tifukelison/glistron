@@ -11,7 +11,6 @@ const database = firebase.database();
 const rootRef = database.ref('storeInfo');
 
 createStoreBtn.addEventListener('click', (e)=>{
-	e.preventDefault();
 	const autoId = rootRef.push().key
 	rootRef.child(autoId).set({
 		storeName: store_name,
@@ -21,12 +20,12 @@ createStoreBtn.addEventListener('click', (e)=>{
 		storeDescription: store_description 
 
 	})
-	// .then(() => {
-	// 	window.location.href="myshop.html"
-	// })
-	// .catch(error => {
-	// 	console.error(error)
-	// })
+	.then(() => {
+		window.location.href="myshop.html"
+	})
+	.catch(error => {
+		console.error(error)
+	})
 	const puf = firebase.storage().ref();
 const file = document.querySelector('.store_logo').files[0]
 const name = (+new Date()) + '-' + file.name;
