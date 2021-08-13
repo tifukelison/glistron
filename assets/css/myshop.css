@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+.header {
+display: flex;
+padding: 12px 123px;
+background: linear-gradient(128deg,rgba(128,0,128, 0.4),  blanchedalmond, oldlace);
+align-items: center;
+
+}
+
+.store_img {background-image: url("https://images.pexels.com/photos/36785/soldier-military-uniform-american.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+width:200px;
+box-shadow: 2px 0px 22px 1px oldlace;
+height:200px;
+border:  2px solid oldlace;
+background-size:cover;
+background-position:center;
+border-radius:50%;}
+.store_img:hover {
+	transition: 1.2s;
+	cursor: pointer;
+transform: rotate3d(6,00, 0, 350deg);
+}
+.store_info h1,.p {
+
+	color: #333333;
+	padding: 12px;
+	font-family: 'Nunito', sans-serif ;
+
+}
+.store_img1 {
+	background-image: url("https://images.pexels.com/photos/36785/soldier-military-uniform-american.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+height: 400px;
+width: 400px;
+background-size: cover;
+background-position: center;
+border-radius: 12px 0px 0px 12px ;
+}
+.store_info1 {
+	border-left: 2px solid black;
+	padding: 12px;
+}
+.box_aboutStore {
+	display: flex;
+	border: 1px solid black;
+	width: 800px;
+	position: absolute;
+	top: 30%;
+	border-radius: 12px;
+	background: oldlace;
+	left: 25%;
+	
+}
+@media screen and (max-width: 700px) {
+	.header {
+		display: block;
+		margin: 2px;
+		padding: 2px;
+	}
+	.store_img1 {
+		border-radius: 12px 12px 0px 0px;
+	}
+	.box_aboutStore {
+		position: relative;
+		/* top: 420px; */
+		width: 402px;
+	/* 	right: 42%; */
+		display: block;
+		margin-left: 40px;
+		transition: 1s;
+		width: fit-content;
+		height: auto;
+	}
+	.store_info1{
+		border: none;
+		border-top: 1px solid oldlace;
+	}
+	
+}
+@media screen and (max-width: 816px) {
+	.box_aboutStore {
+		position: relative;
+		margin: auto;
+	top: 30%;
+	left: 1%;
+	}
+	
+}
+@media screen and (max-width: 450px) {
+	.box_aboutStore {
+		width: 302px;
+	}
+	.store_img1 {
+		width: 300px;
+		height: 300px;
+		object-fit: cover;
+	}
+	
+}

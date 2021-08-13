@@ -63,6 +63,11 @@ button {
     border: none;
     border-radius: 5px;
     transform: translateX(50%);
+    cursor: pointer;
+}
+button:active{
+    padding:12px ;
+    background-color: purple;
 }
 .foot {
     background: linear-gradient(120deg, aqua, purple);
@@ -97,7 +102,7 @@ input {
 
     outline: none;
     border-bottom: 2px solid rgb(93, 119, 214);
-    padding: 12px;
+    padding: 12px 0px;
     color: transparent;
     background: transparent;
 }
