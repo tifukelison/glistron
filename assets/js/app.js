@@ -6,12 +6,14 @@ firebase.auth().onAuthStateChanged((user) => {
     // https://firebase.google.com/docs/reference/js/firebase.User
     var uid = user.uid;
     console.log(uid)
+    document.querySelector('.useremail').innerHTML = `${user.email}`
     // ...
   } else {
     // User is signed out
     // ...
    console.log('u signed out')
    console.log(user)
+   window.location.href= "signINandUp.html"
   }
 });
 

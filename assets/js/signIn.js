@@ -1,67 +1,62 @@
-const swap = document.querySelector('.swap');
-swap.addEventListener('click', (e)=> {
-  e.preventDefault();
-  console.log('switch to create user account')
-  document.querySelector('.coverBox').style.transition = "1.2s";
-  document.querySelector('.coverBox').style.marginLeft = "-262px"
-})
-const swap2 = document.querySelector('.swap2');
-swap2.addEventListener('click',(e)=>{
-  e.preventDefault();
-  console.log('switch to sign in');
-    document.querySelector('.coverBox').style.transition = "1.2s";
-  document.querySelector('.coverBox').style.marginLeft = "260px"
-})
-
-
-
-
-const signup = () => {
-let name_input = document.querySelector('.name')
-let createUserEmail = document.querySelector('.createEmail').value;
-let createUserPass = document.querySelector('.createPass').value;
-let confirmUserPass = document.querySelector('.confirmUserPass').value;
-if (createUserPass === confirmUserPass && createUserPass.length >= 6) {
-  firebase.auth().createUserWithEmailAndPassword(createUserEmail, createUserPass)
+const signUp = () => {
+   let password = document.querySelector('.userpass').value;
+  let userpass = document.querySelector('.confirmuserpass').value;
+  if(userpass === password){
+let email = document.querySelector('.useremail').value;
+  let password = document.querySelector('.userpass').value;
+firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
-    // Signed in 
-    var user = userCredential.user;
-    console.log(user)
-    function writeUserData(name_input, createUserEmail){
-      console.log('works')
-  firebase.database().ref('users/' + userId).set({
-    username: name_input,
-    email: createUserEmail,
-  });
-}
-    // ...
+  let username = document.querySelector('.username').value;
+    var user = {
+name: username,
+ uid: user.uid,
+            email: user.email
+    }
+    function writeUserData(user){
+      firebase.database().ref('users/' + user.uid).set(user).catch(error => {
+        console.log(error.message)
+      })
+    }
+    writeUserData(user)
+
+   console.log(user.uid)
   })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
     // ..
   });
-}else {
-  return false
+
 }
+  }
+  
 
-};
+firebase.auth().onAuthStateChanged(user => {
+  if(user) {
+    document.querySelector('.sign_up-form').style.display = "none"
+    console.log(user.uid)
+      console.log(user.email)  }
+})
 
-const login = () => {
 
-  let loginEmail = document.querySelector('.login_email').value;
-  let loginPassword = document.querySelector('.login_password').value;
-  firebase.auth().signInWithEmailAndPassword(loginEmail, loginPassword)
+const signIn = () => {
+  let signInEmail = document.querySelector('.email').value;
+  let signInPass = document.querySelector('.password').value;
+  firebase.auth().signInWithEmailAndPassword(signInEmail, signInPass)
   .then((userCredential) => {
     // Signed in
     var user = userCredential.user;
-    window.location.href = "index.html";
     // ...
+window.location.href = "index.html"
   })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
-    document.querySelector('small').innerHTML = `${errorMessage}`
+    document.querySelector('.error-signIn').innerHTML = `${errorMessage}`
   });
-}
 
+}
+const showstf = () =>{
+  window.document.title = "Sign In | Glistron"
+  document.querySelector('.sign_up-form').style.display = "none"
+}
