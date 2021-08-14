@@ -1,16 +1,30 @@
 const userId = document.querySelector('#userId').value;
-const store_name = document.querySelector('.store_name').value;
+
+const database = firebase.database();
+const rootRef = database.ref('/storeInfo/' + userId);
+const createStoreBtn = document.querySelector('.createStoreBtn')
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    var uid = user.uid;
+    console.log(uid)
+  } else {
+    // User is signed out
+    // ...
+   console.log('u signed out')
+   console.log(user)
+  }
+});
+createStoreBtn.addEventListener('click', (e)=>{
+	e.preventDefault()
+	const store_name = document.querySelector('.store_name').value;
 const store_location = document.querySelector('.store_location').value;
 const store_number = document.querySelector('.store_number').value;
-const createStoreBtn = document.querySelector('.createStoreBtn')
 const store_category = document.querySelector('.category').value;
 const store_description = document.querySelector('.store_description').value;
 
 
-const database = firebase.database();
-const rootRef = database.ref('storeInfo');
-
-createStoreBtn.addEventListener('click', (e)=>{
 	const autoId = rootRef.push().key
 	rootRef.child(autoId).set({
 		storeName: store_name,
@@ -21,7 +35,7 @@ createStoreBtn.addEventListener('click', (e)=>{
 
 	})
 	.then(() => {
-		window.location.href="myshop.html"
+		console.log('details sent')
 	})
 	.catch(error => {
 		console.error(error)
@@ -39,20 +53,6 @@ task
     console.log(url);
   })
   .catch(console.error);
-
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in 
-    
-    var user = userCredential.user;
-    console.log(user)
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ..
-  });
 });
 
 function updateStore (e){
@@ -79,9 +79,5 @@ function deleteStore(e) {
 		console.error(error)
 	})
 }
-
-
-let email = document.querySelector('#email').value;
-let password = document.querySelector('#password').value;
 
 
