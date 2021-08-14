@@ -61,8 +61,8 @@ transition: 1.2s;
   z-index: 10;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  background: linear-gradient(120deg, rebeccapurple, wheat);
-  padding: 0 16px;
+  background: url(https://images.pexels.com/photos/7195232/pexels-photo-7195232.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); 
+   padding: 0 16px;
 }
 
 #actions {
@@ -110,6 +110,19 @@ transition: 1.2s;
   padding: 24px;
 }
 
+@media screen and (max-width: 700px) {
+  #content {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  @media screen and (max-width: 600px) {
+    #content{
+     display: block;
+    }
+    
+  }
+  
+}
 .card {
   display: block;
   position: relative;

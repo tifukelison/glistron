@@ -1,14 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+
+body  {
+    
+}
 * {
 	margin: 0;
 }
+
 
 .grid {
 	padding: 13px;
 }
 
 .system {
+	/* background-color: #CDE0EF; */
+	background: url('/assets/images/homebg.jpg');
+
+	background-size: cover;
+	background-position: center;
 display: grid;
 grid-template-columns: 153px auto auto;
 }
@@ -59,42 +70,21 @@ grid-template-columns: 153px auto auto;
 .grid-system1{
 	grid-column: 2/4;
 	display: flex;
-	
 	align-items: center;
+	background: wheat;
+	border-radius: 23px;
+  justify-content: space-between;
+	padding: 0px;
+	box-shadow: 2px 3px 12px white;
+	margin: 20px;
+}
 
-	justify-content: space-between;
-	padding: 12px;
-}
-.grid-system1 .search_bar {
-	padding: 12px;
-	display: flex;
-}
-.search {
-	border:  none;
-	padding: 9px;
-	border-radius: 20px 0 0 20px;
-	background: wheat;
-	margin-left: 32px;
-}
-.search_bar input {
-	padding: 9.5px 32px 8px 32px;
-	border-radius: 0px 20px 20px 0px;
-	border: none;
-	font-family: 'Nunito', sans-serif;
-	outline: none;
-	margin-left: -6px;
-	background: wheat;
-}
 .settings_profile {
 	display: flex;
-
-	justify-content: space-around;
-	align-items: center;
+margin: auto;
+	justify-content: space-between;
+	/* align-items: center; */
 	
-}
-.settings_profile a, .profile {
-	margin: 0px 19px;
-	font-family: 'Nunito', sans-serif;
 }
 .welcome {
 	background: url('https://wallpaperaccess.com/full/1155122.jpg');
@@ -110,8 +100,7 @@ grid-template-columns: 153px auto auto;
 	justify-content: space-around;
 }
 .shift_welcome {
-
-	width: 500px;
+    width: 500px;
 	margin: 12px 12px 4px 10px;
 	box-shadow: 0 0 12px 3px wheat;
 	border-radius: 23px;
@@ -131,7 +120,7 @@ grid-template-columns: 153px auto auto;
 	color: #333333;
 }
 .shift_welcome {
-	text-align: left;
+	text-align: center;
 	width: 300px;
 	margin: auto;
 }
@@ -141,19 +130,17 @@ grid-template-columns: 153px auto auto;
 }
 .item_info {
 	background: wheat;
-	width: fit-content;
 	margin: 0 0 0 10px;
 	width: 250px;
 	font-family:'Poppins', sans-serif ;
 	color: black;
 	font-weight: bolder;
 	border-radius: 30px;
-	line-height: 9px;
+	/* line-height: 9px; */
 		padding: 12px 12px 12px 0px;
 }
 .item_info .image img {
-	object-fit: cover;
-	box-shadow: inset 2px 3px 12px 12px grey;
+	/* object-fit: cover; */
 	width: 250px;
 	border-radius: 30px 30px 0 0 ;
 }
@@ -164,6 +151,10 @@ grid-template-columns: 153px auto auto;
 	}
 }
 @media screen and (max-width: 702px) {
+	.settings_profile {
+	position: absolute;
+	left: 23%;
+	}
 	.system {
 		display: block;
 	}
@@ -205,4 +196,81 @@ grid-template-columns: 153px auto auto;
 	.search_bar {
 		padding: 2px;
 	}
+}
+.search-box{
+  position:relative;
+  height:60px;
+  width:0px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55 );
+}
+
+.search-box.active{
+  width: 350px;
+}
+
+.search-box.active input{
+  opacity:1;
+}
+
+.search-box input{
+  height:100%;
+  width:100%;
+  border:none;
+  border-bottom: 3px solid #333;
+  background:transparent;
+  font-size:18px;
+  /* border-radius: 50px; */
+  padding: 0 60px 0 20px;
+  outline:none;
+  opacity:0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55 );
+}
+
+.search-box .search-btn{
+  height:50px;
+  width:50px;
+  background: #fff;
+  color:wheat;
+  position: absolute;
+  top:50%;
+  right:-75px;
+  transform: translateY(-50%);
+  line-height:50px;
+  text-align:center;
+  border-radius:50%;
+  font-size:20px;
+  cursor:pointer;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55 );
+  z-index:2;
+}
+
+.search-box.active .search-btn{
+  height:50px;
+  width:50px;
+  background: #333333;
+  color:#fff;
+}
+
+.search-box .cancel-btn{
+  position: absolute;
+  color: #664AFF;
+  top:50%;
+  right: -75px;
+  transform: translateY(-50%);
+  color:#664AF;
+  font-size:25px;
+  cursor:pointer;
+  height:50px;
+  width:50px;
+  line-height:50px;
+  text-align:center;
+  border-radius:50%
+  opacity:0;
+}
+
+.search-box.active .cancel-btn{
+  right: -135px;
+  opacity:1;
+  color:#333;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55 );
 }
