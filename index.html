@@ -4,8 +4,27 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Primary Meta Tags -->
+<title>Glistron</title>
+<meta name="title" content="Glistron">
+<meta name="description" content="">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://glistron.vercel.app/index.html">
+<meta property="og:title" content="Glistron">
+<meta property="og:description" content="Glistron is a buy and sell community for Cameroonians to sell and buy products. Glistron only make's the market easier. No more than that.">
+<meta property="og:image" content="">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://glistron.vercel.app/index.html">
+<meta property="twitter:title" content="Glistron">
+<meta property="twitter:description" content="Glistron is a buy and sell community for Cameroonians to sell and buy products. Glistron only make's the market easier. No more than that.">
+<meta property="twitter:image" content="">
+
 	<link rel="icon" href="assets/images/logo.svg">
-	<title>Glistron</title><link rel="stylesheet" href="assets/css/signup.css" class="removeLink">
+	<link rel="stylesheet" href="assets/css/signup.css" class="removeLink">
 	 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
@@ -14,7 +33,8 @@
 	<link rel="stylesheet" href="assets/css/loader.css">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-	<!-- <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script> -->
+<link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
     
 </head>
 <body>
@@ -50,7 +70,7 @@
 					<li class="dist"><a href="index.html"><i class="fas fa-home"></i><span> Home</span></a></li>
 					<li class="dist" onclick="ClickMe(this);" ><a href="market.html"><i class="fas fa-person-sign"></i><span> Market</span></a></li>
 					<li class="dist"><a href="create_store.html"><i class="fas fa-store"></i><span> My store</span></a></li>
-					<li class="dist"><a href="post.html"><i class="fas fa-pencil"></i><span> Post</span></a></li>
+					<li class="dist"><a href="#" onclick="goToPost()"><i class="fas fa-pencil"></i><span> Post</span></a></li>
 					<li class="dist"><a href="#"><i class="fas fa-store-alt"></i><span> All Stores</span></a></li>
 					<li class="dist"><a href="#"><i class="fas fa-book"></i><span> Guides</span></a></li>
 					<li class="dist"><a href="contacts.html"><i class="fas fa-phone"></i><span> Contact</span></a></li>
@@ -65,25 +85,16 @@
 				<p>Welcome to Glistron! Here, somebody needs what you have.</p>
 				<div class="flexd">
 				
-				<span><p><a href="market.html"><i class="fas fa-store"></i> See Posts</a></p></span></div>
+				<span ><p><a  href="market.html"><i class="fas fa-store"></i> See Posts</a></p></span></div>
 			</div>
 			
 		</div>
 		<div class="items">
 				<h2 class="items_head">Some of these might interest you!!!.</h2>
-			   <div class="four_cards ">
+			   <div class="four_cards">
 			   	
 			 
-			  <div class="item_info">
-			  	
-			  	 <div class="image"><img src="https://media.istockphoto.com/photos/ai-robot-thinking-picture-id1029035836?k=6&m=1029035836&s=612x612&w=0&h=_4_M1xZh9MTzTCl-w_5mANGkkzkB3eMm9C1UOoRo3pw=" alt="item_image">
-			  </div><p>Posted By: user</p>
-			  	<p>Date: date</p>
-			  	
-			  	<p>About: text</p>
-			  	<button class="btn-secondary border-0 pt-2 pb-2 pl-3 pr-3">Contact</button>
-			  </div>
-
+			  
 			   </div>
 			</div>
 		</div>
@@ -101,6 +112,7 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
 
 <script>
 

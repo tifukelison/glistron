@@ -7,7 +7,24 @@ firebase.auth().onAuthStateChanged((user) => {
     var uid = user.uid;
     console.log(uid)
     document.querySelector('.useremail').innerHTML = `${user.email}`
-    // ...
+     let db = firebase.firestore();
+ db.collection("posts").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+console.log(doc.data())
+let div = document.querySelector('.four_cards')
+let div_4box = document.createElement('div');
+div_4box.innerHTML= `<div class="item_info">
+          
+           <div class="image"><img src="${doc.data().photoUrl}">
+        </div><p>Item Name: ${doc.data().ItemName} </p>
+          <p>Tel: ${doc.data().ItemTel}</p>
+          
+          <p>Price: ${doc.data().ItemPrice}</p>
+          <button class="btn-secondary"><a style="color: white;" href="${doc.data().ItemContact}">Contact</a></button>
+        </div>
+`
+div.appendChild(div_4box)
+    });});
   } else {
     // User is signed out
     // ...
@@ -51,7 +68,10 @@ const logOut = () => {
 });
 }
 
-
+function goToPost(e) {
+  e.preventDefault();
+  window.location.href="post.html"
+}
 
 
 function openHomeDrawer() {

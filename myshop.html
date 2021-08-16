@@ -3,34 +3,41 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title class="title2"></title>
-	<link rel="stylesheet" href="assets/css/myshop.css">
-
+	<title></title>
+	<link rel="stylesheet" href="assets/css/myshop.css"><link rel="stylesheet" href="assets/css/css-skeletons.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+ 
 </head>
 <body>
+	<div class="body">
 	<header>
 		<div class="header">
-		<div class="store_img">
+		<div class="store_img skeleton skeleton-circle">
 			
 		</div>
 		<div class="store_info">
-			<h1>Store Name</h1>
-			<p class="p description">Store description</p>
-			<p class="p location">Fetching Please Wait</p>
-			<p class="p data_created">Date_created</p>
+			<h1 class="h1_storeName ph-item skeleton">k</h1>
+			<p class="p description skeleton skeleton-line"></p>
+			<p class="p location skeleton skeleton-line"></p>
+			<p class="p data_created skeleton skeleton-line"></p>
 
 		</div>
 		</div>
 	</header>
 	<div class="box_aboutStore">
-		<div class="store_img1">
+		<div class="store_img1 skeleton skeleton-image">
 			
 		</div>
-		<div class="store_info1">
-			<h1 class="store_name">Store Name</h1>
-			<p class="store_tagline">Store tagline</p>
-			<p class="store_description">Description</p>
+		<div class="store_info1 skeleton skeleton-rec">
+			<h1 class="store_name"></h1>
+			<p class="store_tagline"></p>
+			<p class="store_description"></p>
+
+		  
 		</div>
+	
+	</div>
 	</div>
 	 <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
 
@@ -41,6 +48,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
 <script type="text/javascript">
   // Your web app's Firebase configuration
 

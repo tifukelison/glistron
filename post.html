@@ -5,29 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posting Area| Glistron</title>
-    <link rel="stylesheet" href="assets/css/post.css">
+    <!-- <link rel="stylesheet" href="assets/css/post.css"> -->
+    <link rel="stylesheet" href="assets/css/create_store.css">
 </head>
 <body>
     <div class="container">
-        <form action="#">
-            <label for="username">Username:</label><br>
-            <input type="text" name="username" placeholder="e.g Nelly's Closet" class="store_name"><br><br>
+        <form action="">
+            <label for="username">Item Name:</label><br>
+            <input type="text" placeholder="Item Name" class="item_name"/><br><br>
     
-            <label for="tel">Tell:</label><br>
-            <input type="tel" placeholder="67********" class="tel_number"><br><br>
+            <label for="tel">Telephone:</label><br>
+            <input type="tel" placeholder="67********" class="item_tel"><br><br>
     
-            <label for="image">Image</label><br>
+            <label for="image">Image of Item</label><br>
             <input type="file" id="file" placeholder="No file selected" required><br><br>
     
             <label for="location">Location:</label><br>
-            <input type="text" placeholder="Enter selling town. e.g Bamenda" class="location" required><br><br>
-    
-    
+            <input type="text" placeholder="Enter selling town. e.g Bamenda" class="item_location" required><br><br>
+     <label for="location">Price:</label><br>
+     <input type="number" placeholder="Enter price" class="item_price" required><br><br>
             <label for="item">Item Description</label><br>
             <textarea id="item-description" name="item-description" rows="6" cols="50" placeholder="Please describe the item your selling here...">
                 </textarea><br><br>
             <div class="button">
-                <button><b> Upload</b></button>
+                <button type="submit" class="submitBtn">Submit</button>
             </div>
             
 
@@ -37,6 +38,40 @@
             </div>
         </form>
     </div>
-   
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+<script type="text/javascript">
+  // Your web app's Firebase configuration
+
+  var firebaseConfig = {
+
+    apiKey: "AIzaSyBQUKunsqV8lK_TNzcZQBu5U7UDXMspdd8",
+
+    authDomain: "glistronv2.firebaseapp.com",
+
+    projectId: "glistronv2",
+
+    storageBucket: "glistronv2.appspot.com",
+
+    messagingSenderId: "622683501491",
+
+    appId: "1:622683501491:web:3fb4b3efc5ba17c49291c6"
+
+  };
+
+  // Initialize Firebase
+
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+<script type="text/javascript" src="assets/js/post.js"></script>
 </body>
 </html>
