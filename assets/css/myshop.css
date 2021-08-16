@@ -9,7 +9,7 @@
 
 .header {
 display: flex;
-padding: 12px 123px;
+padding: 12px;
 background: linear-gradient(128deg,rgba(128,0,128, 0.4),  blanchedalmond, oldlace);
 align-items: center;
 
@@ -35,27 +35,36 @@ transform: rotate3d(6,00, 0, 350deg);
 	font-family: 'Nunito', sans-serif ;
 
 }
+.store_info1{
+	box-shadow: 1px 2px 13px 4px white;
+}
 .store_img1 {
 	background-image: url("https://images.pexels.com/photos/36785/soldier-military-uniform-american.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500");
 height: 400px;
 width: 400px;
 background-size: cover;
 background-position: center;
-border-radius: 12px 0px 0px 12px ;
+/* border-radius: 12px 0px 0px 12px ; */
 }
 .store_info1 {
-	border-left: 2px solid black;
+	font-family: 'Poppins';
+
 	padding: 12px;
+}
+.show_aboutStore{
+	opacity: 1;
+	pointer-events: all;
 }
 .box_aboutStore {
 	display: flex;
-	border: 1px solid black;
+	opacity: 0;
+	pointer-events: none;
 	width: 800px;
 	position: absolute;
 	top: 30%;
 	border-radius: 12px;
 	background: oldlace;
-	left: 25%;
+	left: 20%;
 	
 }
 @media screen and (max-width: 700px) {
@@ -65,7 +74,7 @@ border-radius: 12px 0px 0px 12px ;
 		padding: 2px;
 	}
 	.store_img1 {
-		border-radius: 12px 12px 0px 0px;
+		/* border-radius: 12px 12px 0px 0px; */
 	}
 	.box_aboutStore {
 		position: relative;
@@ -80,7 +89,7 @@ border-radius: 12px 0px 0px 12px ;
 	}
 	.store_info1{
 		border: none;
-		border-top: 1px solid oldlace;
+		
 	}
 	
 }
@@ -103,4 +112,21 @@ border-radius: 12px 0px 0px 12px ;
 		object-fit: cover;
 	}
 	
+}
+
+.btns {
+	display: flex;
+	justify-content: space-around;
+	text-align: left;
+}
+.btns button {
+	border: none;
+	background: #ce93d8;
+	padding: 8px;
+	cursor: pointer;
+	font-family: 'Poppins';
+}
+.btns button:active {
+	background: #e1bee7;
+
 }
