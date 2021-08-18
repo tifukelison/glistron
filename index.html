@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/3.2.0/material-components-web.min.css">
 	<!-- Primary Meta Tags -->
 <title>Glistron</title>
 <meta name="title" content="Glistron">
@@ -43,7 +44,25 @@
 	</div> -->
 	
 	<div class="system">
-		<div class="grid-system1 grid">
+	
+		<div class="grid-system2 grid"><div class="side_bar">
+				
+				<div class="menu" onclick="openHomeDrawer();"><div class="logo">
+					<img src="assets/images/G.png" >
+					<h1>GLISTRON</h1>
+				</div><span>Menu <svg width="24" height="24" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg></span></div>
+				<ul class="list unstyled">
+					<li class="dist"><a href="index.html"><i class="fas fa-home"></i><span> Home</span></a></li>
+					<li class="dist" onclick="ClickMe(this);" ><a href="market.html"><i class="fas fa-person-sign"></i><span> Market</span></a></li>
+					<li class="dist"><a href="create_store.html"><i class="fas fa-store"></i><span> My store</span></a></li>
+					<li class="dist"><a href="post.html" onclick="goToPost()"><i class="fas fa-pencil"></i><span> Post</span></a></li>
+					<li class="dist"><a href="#"><i class="fas fa-store-alt"></i><span> All Stores</span></a></li>
+					<li class="dist"><a href="#"><i class="fas fa-book"></i><span> Guides</span></a></li>
+					<li class="dist"><a href="contacts.html"><i class="fas fa-phone"></i><span> Contact</span></a></li>
+					<li class="dist" onclick="logOut();"><a href="#" ><i class="fas fa-user"></i><span> LogOut</span></a></li>
+				</ul>
+			</div></div>
+				<div class="grid-system1 grid">
 			<div class="search-box">
     <input type="text" placeholder="Type to search..."/>
     <div class="search-btn">
@@ -61,22 +80,6 @@
 			<svg width="24" height="24" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M7,10L12,15L17,10H7Z" /></svg>
 			</div>
 		</div>
-		<div class="grid-system2 grid"><div class="side_bar">
-				<div class="logo">
-					<img src="assets/images/bidtmap.png" >
-				</div>
-				<div class="menu" onclick="openHomeDrawer();">Menu <svg width="24" height="24" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg></div>
-				<ul class="list unstyled">
-					<li class="dist"><a href="index.html"><i class="fas fa-home"></i><span> Home</span></a></li>
-					<li class="dist" onclick="ClickMe(this);" ><a href="market.html"><i class="fas fa-person-sign"></i><span> Market</span></a></li>
-					<li class="dist"><a href="create_store.html"><i class="fas fa-store"></i><span> My store</span></a></li>
-					<li class="dist"><a href="#" onclick="goToPost()"><i class="fas fa-pencil"></i><span> Post</span></a></li>
-					<li class="dist"><a href="#"><i class="fas fa-store-alt"></i><span> All Stores</span></a></li>
-					<li class="dist"><a href="#"><i class="fas fa-book"></i><span> Guides</span></a></li>
-					<li class="dist"><a href="contacts.html"><i class="fas fa-phone"></i><span> Contact</span></a></li>
-					<li class="dist" onclick="logOut();"><a href="#" ><i class="fas fa-user"></i><span> LogOut</span></a></li>
-				</ul>
-			</div></div>
 		<div class="grid-system3 grid ">
 			<div class="shift">
 			<div class="shift_welcome">
@@ -92,8 +95,9 @@
 		<div class="items">
 				<h2 class="items_head">Some of these might interest you!!!.</h2>
 			   <div class="four_cards">
-			   	
-			 
+			   	<div class="card1"></div>
+			   	<div class="card2"></div>
+					<div class="card3"></div>			 
 			  
 			   </div>
 			</div>
