@@ -11,9 +11,11 @@ firebase.auth().onAuthStateChanged((user) => {
  db.collection("posts").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
 console.log(doc.data())
-let div = document.querySelector('.four_cards')
-let div_4box = document.createElement('div');
-div_4box.innerHTML= `<div class="item_info">
+let div3 = document.querySelector('.card1')
+let div2 = document.querySelector('.card2')
+let div1 = document.querySelector('.card3')
+
+let cardice= `<div class="item_info">
           
            <div class="image"><img src="${doc.data().photoUrl}">
         </div><p>Item Name: ${doc.data().ItemName} </p>
@@ -23,8 +25,11 @@ div_4box.innerHTML= `<div class="item_info">
           <button class="btn-secondary"><a style="color: white;" href="${doc.data().ItemContact}">Contact</a></button>
         </div>
 `
-div.appendChild(div_4box)
+div1.innerHTML = cardice;
+div2.innerHTML = cardice;
+div3.innerHTML = cardice;
     });});
+
   } else {
     // User is signed out
     // ...

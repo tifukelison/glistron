@@ -1,8 +1,200 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+.system {
+background: #bcaaa4;
+}
 
+.menu {
+	text-align: right;
+	padding: 12px;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	font-family: 'Poppins', sans-serif;
+	font-weight: bolder;
+	color: white;
+	background: #5d4037;
+}
+.menu span {
+	cursor: pointer;
+	background: #3e2723;
+	padding: 12px;
+}
 
-body  {
+.menu .logo img {
+	width: 100px;
+	border-radius: 50%;
+}
+.unstyled {
+	text-align: center;
+	list-style: none;
+	margin: 12px;
+}
+
+.unstyled i {
+	display: none;
+}
+.unstyled li {
+	transition: 1s;
+  padding: 12px;
+	background: #4e342e;
+
+}
+.unstyled {
+		margin-top: -872px;
+}
+.styled {
+	transition: 1.2s;
+	margin-top: 9px;
+}
+
+.unstyled li a {
+	transition: 1s;
+	color: white;
+	text-decoration: none;
+	font-family: 'Poppins';
+	font-weight: bolder;
+}
+.unstyled li:hover {
+	background: #795548;
+	transition: 1.2s;
+	
+}
+.search-box {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.search-box input {
+	padding: 7px 0;
+	border: none;
+	border-bottom: 1px solid black;
+}
+.search-box input[placeholder] {
+	color: #795548;
+	font-family: 'Nunito',sans-serif;
+	font-weight: bolder;
+}
+.search-box .cancel-btn {
+	display: none;
+}
+.search-box .search-btn {
+background: #4e342e;
+	color: white;
+padding: 15px 18px;
+	cursor: pointer;
+border-radius: 50%;}
+.settings_profile {
+	display: flex;
+	margin: auto;
+	align-items: top;
+	justify-content: space-evenly;
+}
+.shift_welcome {
+	padding: 12px;
+	margin: 12px;
+	box-shadow: 0 0 12px 8px #efebe9;
+	background: #4e342e;
+	color: white;
+	font-family: 'Nunito',sans-serif;
+	
+}
+.shift_welcome i {
+	display: none;
+}
+.shift_welcome a {
+	color: #efebe9;
+	text-decoration: underline;
+	
+}
+.items {
+	color: #4e342e;
+	margin: 12px;
+	font-weight: bolder;
+	font-family: 'Nunito', sans-serif;
+}
+.four_cards {
+	display: block;
+	margin: auto;
+}
+.item_info {
+	width: 300px;
+	background: #795548;
+	color: white;
+	font-family: 'Nunito', sans-serif;
+}
+
+.item_info button {
+	padding: 12px;
+	width: 300px;
+	background: #3e2723;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+}
+.item_info img {
+	width: 300px;
+	object-fit: cover;
+	height: 400px;
+
+}
+.grid-system1 {
+	margin-top: 132px;
+}.menu .logo {
+		display: flex;
+		align-items: center;
+		color:  wheat;
+	}
+	.menu .logo h1 {
+		padding:  0 8px;
+		font-weight: bold;
+	}
+@media screen and (min-width: 851px) {
+
+	.unstyled {
+		margin-top: 9px;
+}
+.styled {
+	transition: 1.2s;
+	margin-top: 9px;
+}
+	.search-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 12px;
+	}
+	.settings_profile {
+		display: flex;
+		justify-content: right;
+	}
+	.four_cards {
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+	.unstyled {
+		padding: 12px;
+background:  #4e342e;
+	}
+	.unstyled li{
+color: black;
+		display: inline;
+	}
+	.unstyled li:hover {
+		background: #3e2723;
+	}
+	.menu span  {
+		display: none;
+	}
+	.unstyled li a {
+		color:wheat;
+		display: inline;
+	}
+}
+/* 
+
+/* body  {
     
 }
 * {
@@ -14,10 +206,9 @@ body  {
 	padding: 13px;
 }
 
-.system {
-	/* background-color: #CDE0EF; */
-	background: url('/assets/images/homebg.jpg');
-
+.system { */
+	/* background-color: #CDE0EF;
+	/* background:#ccc;
 	background-size: cover;
 	background-position: center;
 display: grid;
@@ -63,7 +254,7 @@ grid-template-columns: 153px auto auto;
 	transition: 500ms;
 	padding: 12px 3px;
 	/* margin: 52px 0; */
-	border-radius: 12px 0 0 12px;
+	/* border-radius: 12px 0 0 12px;
 	background: white;
 }
 
@@ -84,7 +275,7 @@ grid-template-columns: 153px auto auto;
 margin: auto;
 	justify-content: space-between;
 	/* align-items: center; */
-	
+/* 	
 }
 .welcome {
 	background: url('https://wallpaperaccess.com/full/1155122.jpg');
@@ -137,11 +328,11 @@ margin: auto;
 	font-weight: bolder;
 	border-radius: 30px;
 	/* line-height: 9px; */
-		padding: 12px 12px 12px 0px;
+	/* /* /* 	padding: 12px 12px 12px 0px;
 }
 .item_info .image img {
 	/* object-fit: cover; */
-	width: 250px;
+/* 	width: 250px;
 	border-radius: 30px 30px 0 0 ;
 }
 
@@ -149,11 +340,20 @@ margin: auto;
 	.menu {
 		display: none;
 	}
+
+} */
+/* .four_cards {
+	display: grid;
+	grid-template-columns: auto auto auto;
+
 }
 @media screen and (max-width: 702px) {
 	.settings_profile {
 	position: absolute;
 	left: 23%;
+	}
+		.four_cards {
+		display: block;
 	}
 	.system {
 		display: block;
@@ -167,8 +367,8 @@ margin: auto;
 		width: 100%;
 	box-sizing: border-box;
 	max-width: 100%;
-	}
-	.unstyled {
+	} */
+/* 	.unstyled {
 		display: none;
 	}
 	.styled {
@@ -183,9 +383,9 @@ margin: auto;
 	.shift_welcome {
 		width: 100%;
 	box-sizing: border-box;
-	max-width: 100%;
+	max-width: 100%; */
 		/* margin: 20px 12px 12px 10px; */
-	}
+	/* }
 	.grid-system1 .search_bar {
 		margin: auto;
 
@@ -200,8 +400,8 @@ margin: auto;
 .search-box{
   position:relative;
   height:60px;
-  width:0px;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55 );
+  width:0px; */
+/*   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55 );
 }
 
 .search-box.active{
@@ -220,7 +420,7 @@ margin: auto;
   background:transparent;
   font-size:18px;
   /* border-radius: 50px; */
-  padding: 0 60px 0 20px;
+  /* padding: 0 60px 0 20px;
   outline:none;
   opacity:0;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55 );
@@ -243,8 +443,8 @@ margin: auto;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55 );
   z-index:2;
 }
-
-.search-box.active .search-btn{
+ */
+/* .search-box.active .search-btn{
   height:50px;
   width:50px;
   background: #333333;
@@ -261,12 +461,12 @@ margin: auto;
   font-size:25px;
   cursor:pointer;
   height:50px;
-  width:50px;
-  line-height:50px;
+  width:50px; */
+ /*  line-height:50px;
   text-align:center;
   border-radius:50%
-  opacity:0;
-}
+  opacity:0;  */
+/* }
 
 .search-box.active .cancel-btn{
   right: -135px;
@@ -279,8 +479,9 @@ margin: auto;
 	width: 250px;
 	margin: 0 0 -32px 0;
 	height: 50px;
-	border-radius: 0 0 20px 22px;
-}
-.btn-secondary:active {
-	color: wheat;
-}
+	border-radius: 0 0 20px 22px; */
+/* } */
+/* .btn-secondary:active {
+	color: wheat; */
+/* } */
+/* 
