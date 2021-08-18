@@ -14,11 +14,12 @@ console.log(doc.data())
 let div = document.querySelector('#content')
 let div_4box = document.createElement('div');
 div_4box.innerHTML= `<div class="item_info">
-          <p>Item Name: ${doc.data().ItemName} </p>
-          <p>Tel: ${doc.data().ItemTel}</p>
-          
+         
            <div class="image"><img src="${doc.data().photoUrl}">
         </div>
+         <p class="itemName">Item Name: ${doc.data().ItemName} </p>
+          <p>Tel: ${doc.data().ItemTel}</p>
+          
           <p>Price: ${doc.data().ItemPrice}</p>
            <p>Description: ${doc.data().ItemDescription}</p>
           <button class="btn-secondary"><a style="color: white;" href="${doc.data().ItemContact}">Contact</a></button>
@@ -58,4 +59,24 @@ function showDrawer() {
   const drawer = document.querySelector('.drawer');
   drawer.classList.toggle('showDrawer');
 
+}
+
+function searchQuery() {
+  let input, filter, div, p, span, i, txtValue;
+  input = document.querySelector('.searchbar__');
+  filter = input.value.toUpperCase();
+  div = document.querySelector('.item_info')
+  p = div.querySelector('.itemName');
+
+  //Loop through all divs and hid those who dont contain what is the search
+console.log('')
+   for (i = 0; i < p.length; i++) {
+     span = p[i].querySelector('.itemName')[0];
+     txtValue = span.textContent || span.innerText;
+     if (txtValue.toUpperCase().indexOf(filter)> -1) {
+      p[i].style.display = "";
+     }else{
+       p[i].style.display = "none"
+     }
+   }
 }

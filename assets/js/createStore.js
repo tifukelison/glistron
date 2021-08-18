@@ -40,6 +40,7 @@ let db = firebase.firestore();
  db.collection("users").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
          console.log(doc.id, " => ", doc.data());
+         
     });
 });
 const createStoreBtn = document.querySelector('.createStoreBtn')
@@ -53,6 +54,13 @@ const store_category = document.querySelector('.category').value;
 const store_description = document.querySelector('.store_description').value;
 let db = firebase.firestore();
 var dbUser = db.collection('users')
+.doc(user.uid).set({
+ email: user.email,
+storeName: store_name,
+storeLocation: store_location,
+storeNumber: store_number,
+storeCategory: store_category,
+storeDescription: store_description,
  // const puf = firebase.storage().ref();
 // const file = document.querySelector('.store_logo').files[0]
 // const name = (+new Date()) + '-' + file.name;
@@ -67,14 +75,6 @@ var dbUser = db.collection('users')
 //   })
 //   .catch(console.error);
 // });
-.doc(user.uid).set({
- email: user.email,
-storeName: store_name,
-storeLocation: store_location,
-storeNumber: store_number,
-storeCategory: store_category,
-storeDescription: store_description,
-
 
 }).then(()=>{
 	window.location.href="myshop.html"

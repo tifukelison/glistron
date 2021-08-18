@@ -1,4 +1,6 @@
 const signUp = () => {
+   document.querySelector('.succes_signup').classList.add('succes_signupu');
+
    let password = document.querySelector('.userpass').value;
   let userpass = document.querySelector('.confirmuserpass').value;
   if(userpass === password){
@@ -40,6 +42,7 @@ firebase.auth().onAuthStateChanged(user => {
 
 
 const signIn = () => {
+  document.querySelector('.succes_signin').classList.add('succes_signinI');
   let signInEmail = document.querySelector('.email').value;
   let signInPass = document.querySelector('.password').value;
   firebase.auth().signInWithEmailAndPassword(signInEmail, signInPass)

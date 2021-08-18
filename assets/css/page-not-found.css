@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.body {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+position: relative;
+bottom: -180px;
+
+}
+
+.error_info {
+	width: 400px;
+	font-family: 'Poppins';
+		background-clip: text;
+
+}
+.error_info h1, .broken_robo h1{
+	color: transparent;
+	background: url('/assets/images/homebg.jpg');
+	font-size: 90px;
+	background-size: contain;
+
+	background-clip: text;
+}
+.goHome,.goHomes {
+	display: flex;
+	border: none;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top:-53px;
+}
+
+.goHomes button:active {
+	position: absolute;
+	background: red;
+	padding: 12px;
+	border-radius: 2px;
+
+}
+
+.goHomes a {
+	text-decoration: none;
+	color: white;
+	background: #bbdefb;
+	padding: 12px;
+	border-radius: 2px;
+	cursor: pointer;
+	font-family: "Poppins";
+
+}
+.goHome a:active {
+
+}

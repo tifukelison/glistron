@@ -30,6 +30,7 @@ label {
 	border: none;
 	width:  300px;
 	padding: 10px 0;
+	cursor: pointer;
 	margin: 12px 0;
 }
 .sign_in-form form button , .sign_up-form  button{
@@ -63,8 +64,7 @@ background-color: wheat;
 	margin: auto;
 	transform: rotateX(360deg);
 	/* animation: fall 2s ease-in alternate; */
-}
-.succes_click , .succes_signupu{
+}.succes_signupu,.succes_signinI{
 	opacity: 1;
 	transform: rotateX(360deg);
 }
