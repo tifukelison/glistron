@@ -11,11 +11,9 @@ firebase.auth().onAuthStateChanged((user) => {
  db.collection("posts").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
 console.log(doc.data())
-let div3 = document.querySelector('.card1')
-let div2 = document.querySelector('.card2')
-let div1 = document.querySelector('.card3')
-
-let cardice= `<div class="item_info">
+let div3_box = document.querySelector('.four_cards');
+let div3 = document.createElement('div');
+div3.innerHTML= `<div class="item_info">
           
            <div class="image"><img src="${doc.data().photoUrl}">
         </div><p>Item Name: ${doc.data().ItemName} </p>
@@ -25,9 +23,7 @@ let cardice= `<div class="item_info">
           <button class="btn-secondary"><a style="color: white;" href="${doc.data().ItemContact}">Contact</a></button>
         </div>
 `
-div1.innerHTML = cardice;
-div2.innerHTML = cardice;
-div3.innerHTML = cardice;
+div3_box.appendChild(div3)
     });});
 
   } else {
