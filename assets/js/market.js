@@ -21,6 +21,7 @@ div_4box.innerHTML= `<div class="item_info">
           <p>Tel: ${doc.data().ItemTel}</p>
           
           <p>Price: ${doc.data().ItemPrice}</p>
+          <p>Location: ${doc.data().ItemLocation}</p>
            <p>Description: ${doc.data().ItemDescription}</p>
           <button class="btn-secondary"><a style="color: white;" href="${doc.data().ItemContact}">Contact</a></button>
         </div>

@@ -6,7 +6,10 @@ background-color: #a44200;
 background-image: linear-gradient(315deg, #a44200 0%, #f2c17d 74%);
 
 }
-
+.grid-system1 {
+	 background: url('../images/shoesbg.jpg');
+	 background-size: contain;
+}
 .menu {
 	text-align: right;
 	padding: 12px;
@@ -160,30 +163,23 @@ border-radius: 0px 20px 20px 0px;}
 }
 
 	.grid-system1 {
-		display: block;
-		margin-top: 12px;
-		justify-content: center;
+text-align: center;
+	height: 330px;
+	background-size: cover;
+	padding: 3%;
 	}
-	.grid-system1 .otherSide {
-		background: wheat;
-		padding: 32px 12px;
-		/* border: 3px solid brown; */
-		height: 10%;
-   margin: 12px;
-		width: 10%px;
-		text-align: center;
-
-	}
-	.grid-system1 .otherSide h1 {
+	.grid-system1 h1 {
 		text-shadow: -2px -3px #bcaaa4;
-
+color: white;
 		font-family: 'Style Script', sans-serif;
 		font-weight: bold;
 		font-size: 90px;
 	}
-	.grid-system1 .otherSide p {
+	.grid-system1 p {
+		padding:  12px 20px;
+		color: white;
 		font-family: 'Poppins', sans-serif;
-		font-size: 30px;
+		font-size: 20px;
 	}
 .grid-system1 {
 	margin-top: 132px;
@@ -210,11 +206,6 @@ border-radius: 0px 20px 20px 0px;}
 	width: 400px;
 	position: relative;
 	left: 35%;
-}
-.grid-system1 {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
 }
 	/* .search-box {
 		display: flex;

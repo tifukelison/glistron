@@ -8,18 +8,16 @@ let email = document.querySelector('.useremail').value;
   let password = document.querySelector('.userpass').value;
 firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
+    let database = firebase.database()
   let username = document.querySelector('.username').value;
-    var user = {
-name: username,
+      firebase.database().ref('users/' + user.uid).set({
+        name: username,
  uid: user.uid,
-            email: user.email
-    }
-    function writeUserData(user){
-      firebase.database().ref('users/' + user.uid).set(user).catch(error => {
+email: user.email
+      }).catch(error => {
         console.log(error.message)
       })
-    }
-    writeUserData(user)
+
 
    console.log(user.uid)
   })
@@ -29,8 +27,10 @@ name: username,
     // ..
   });
 
-}
+}else {
+  
   }
+}
   
 
 firebase.auth().onAuthStateChanged(user => {
@@ -62,4 +62,33 @@ window.location.href = "index.html"
 const showstf = () =>{
   window.document.title = "Sign In | Glistron"
   document.querySelector('.sign_up-form').style.display = "none"
+}
+
+function googleAuth() {
+  let provider = new firebase.auth.GoogleAuthProvider();
+firebase.auth().languageCode = 'it';
+firebase.auth()
+  .signInWithPopup(provider)
+  .then((result) => {
+    /** @type {firebase.auth.OAuthCredential} */
+    var credential = result.credential;
+
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+    conssole.log(user)
+    window.location.href = "index.html"
+  }).catch((error) => {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+
 }

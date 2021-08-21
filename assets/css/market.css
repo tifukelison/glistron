@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
-
+body {
+  background: url('../images/shoesbg.jpg');
+}
 .search_icon, .dots_icon, .drawer_icon {
   cursor: pointer;
 }

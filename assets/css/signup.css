@@ -9,9 +9,10 @@
 }
 .sign_in-form , .sign_up-form{
 	padding: 52px;
-	background: wheat;
+	background: #795548;
+	color: white;
 	border: 2px solid white;
-	border-radius: 23px;
+	/* border-radius: 23px; */
 
 }
 .sign_in-form, .sign_up-form{
@@ -97,4 +98,17 @@ background-color: wheat;
 .error-signup {
 	font-family: 'Raleway';
 	font-size: 23px;
+}
+.Auths {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 12px;
+}
+.googleAuth,.facebookAuth,.twitterAuth {
+	/* border: 2px solid black; */
+	/* border-radius: 50%; */
+	color: whit;
+	/* padding: 8px; */
+	font-size: 34px;
+	cursor: pointer;
 }

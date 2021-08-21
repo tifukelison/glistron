@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background: url('../images/animateBg.svg');
+	background-size: cover;
+}
+
+.contact_card {
+	background: #795548;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* border: 2px solid black; */
+	border-radius: 12px;
+	color: white;
+	padding: 1% 6%;
+
+}
+.svg svg {
+	width: 400px;
+	padding: 0 7% 0 0;
+}
+
+label {
+	display: block;
+	padding: 12px;
+	font-family: 'Ubuntu',sans-serif;
+	font-size: 34px;
+}
+
+input,textarea {
+	width: 400px;
+	border: none;
+	padding: 9px;
+	outline: none;
+	background: #efebe9;
+	margin: 12px;
+	color: #795548;
+/* border-radius: 30px; */
+font-family: 'Poppins',sans-serif;
+}
+.contact_card button {
+	background: #efebe9;
+	border:  none;
+	font-family: 'Poppins',sans-serif;
+	margin: 12px;
+	padding: 9px;
+}
+.contact_card button:active {
+	padding: 10px;
+}
+@media screen and (max-width: 870px) {
+	.contact_card {
+		display: block;
+	}
+	
+}
