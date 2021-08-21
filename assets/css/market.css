@@ -113,14 +113,13 @@ background: #795548;
     display: grid;
     grid-template-columns: auto auto;
   }
+}
   @media screen and (max-width: 600px) {
     #content{
      display: block;
     }
     
   }
-  
-}
 .item_info {
   display: block;
   position: relative;
