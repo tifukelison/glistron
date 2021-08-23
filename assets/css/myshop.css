@@ -15,7 +15,8 @@ align-items: center;
 
 }
 
-.store_img {background-image: url("https://images.pexels.com/photos/36785/soldier-military-uniform-american.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+.store_img img{
+	object-fit: cover;
 width:200px;
 box-shadow: 2px 0px 22px 1px oldlace;
 height:200px;
@@ -23,7 +24,7 @@ border:  2px solid oldlace;
 background-size:cover;
 background-position:center;
 border-radius:50%;}
-.store_img:hover {
+.store_img img:hover {
 	transition: 1.2s;
 	cursor: pointer;
 transform: rotate3d(6,00, 0, 350deg);
@@ -38,38 +39,47 @@ transform: rotate3d(6,00, 0, 350deg);
 .store_info1{
 	box-shadow: 1px 2px 13px 4px white;
 }
-.store_img1 {
-	background-image: url("https://images.pexels.com/photos/36785/soldier-military-uniform-american.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-height: 400px;
+.store_img1 img{
+	object-fit: cover;
+	height: 400px;
 width: 400px;
 background-size: cover;
 background-position: center;
-/* border-radius: 12px 0px 0px 12px ; */
+border-radius: 12px 0px 0px 12px ;
 }
 .store_info1 {
 	font-family: 'Poppins';
 
 	padding: 12px;
 }
-.show_aboutStore{
-	opacity: 1;
-	pointer-events: all;
-}
+
 .box_aboutStore {
-	display: flex;
 	opacity: 0;
 	pointer-events: none;
+	display: flex;
 	width: 800px;
 	position: absolute;
 	top: 30%;
 	border-radius: 12px;
 	background: oldlace;
 	left: 20%;
+	transition: 1.2s;
 	
+}
+.openPop {
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	cursor: pointer;
+}
+.show_aboutStore{
+	/* display: flex; */
+	transition: 1.2s;
+	opacity: 1;
+	pointer-events: all;
 }
 @media screen and (max-width: 700px) {
 	.header {
-		display: block;
+		/* display: block; */
 		margin: 2px;
 		padding: 2px;
 	}
@@ -97,6 +107,7 @@ background-position: center;
 	.box_aboutStore {
 		position: relative;
 		margin: auto;
+		display: block;
 	top: 30%;
 	left: 1%;
 	}
@@ -128,5 +139,19 @@ background-position: center;
 }
 .btns button:active {
 	background: #e1bee7;
+
+}
+.storeDeletedi {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	background: white;
+	padding: 24px 54px;
+	border-radius: 23px;
+	box-shadow: 0 0 12px 12px grey;
+	display: none;
 
 }

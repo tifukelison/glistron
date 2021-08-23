@@ -19,7 +19,7 @@ const name = (+new Date()) + '-' + file.name;
 const metadata = {
   contentType: file.type
 };
-const task = puf.child(name).put(file, metadata);
+const task = puf.child("userPosts/"+name).put(file, metadata);
 task
   .then(snapshot => snapshot.ref.getDownloadURL())
   .then((url) => {

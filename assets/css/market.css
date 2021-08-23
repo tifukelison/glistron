@@ -104,7 +104,7 @@ background: #795548;
 #content {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  position: relative;
+  /* position: relative; */
   padding: 24px;
 }
 
