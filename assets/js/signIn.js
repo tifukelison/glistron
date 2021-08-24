@@ -69,7 +69,7 @@ const googleAuth = () => {
 
   auth.signInWithPopup(googleProvider)
   .then(()=>{
-   window.location.assign('index')
+   window.location.assign('index.html')
   })
   .catch((error)=>{
     console.error(error)
