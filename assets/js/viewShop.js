@@ -75,3 +75,60 @@ if (user) {
 // var uid = firebase.auth().currentUser.uid;
 //  let db = firebase.firestore();
 // var docRef = db.collection("users").doc(uid);
+let postBtn = document.querySelector('#post');
+postBtn.addEventListener('click',() => {
+
+firebase.auth().onAuthStateChanged(function(user) {
+const item_price = document.querySelector('.inputPrice').value;
+const puf = firebase.storage().ref();
+const file = document.querySelector('#file').files[0]
+const name = (+new Date()) + '-' + file.name;
+const metadata = {
+  contentType: file.type
+};
+const task = puf.child("userStorePosts/"+name).put(file, metadata);
+task
+  .then(snapshot => snapshot.ref.getDownloadURL())
+  .then((url) => {
+    let urlp = url;
+let db = firebase.firestore();
+var dbUser = db.collection('storePost-'+user.uid)
+.add({
+   postUrl: urlp,
+    ItemPrice: item_price
+
+}).then(()=>{
+ document.querySelector('.storePost').style.display = "none"
+}).catch((error) =>  {
+   console.log("error adding post")
+});
+console.log(url)
+}).catch(console.error)
+
+
+});
+});
+
+firebase.auth().onAuthStateChanged((user)=>{
+  if (user) {
+    let db = firebase.firestore();
+ db.collection("storePost-"+user.uid).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+         console.log(doc.id, " => ", doc.data());
+   let div = document.querySelector('.storeViewPost');
+    let data = ` 
+      <div class="storeImagePost">
+        <img src="${doc.data().postUrl}" alt="storePost">
+      </div>
+      <p>Price: <span class="price">${doc.data().ItemPrice}</span>Frs</p>
+    </div>
+  `
+  let divs = document.createElement('div');
+  divs.innerHTML = data;
+  div.appendChild(divs)
+         
+    });
+      
+});
+  }
+})

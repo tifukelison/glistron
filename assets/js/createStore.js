@@ -1,4 +1,4 @@
-
+//location: project/
 let db = firebase.firestore();
  db.collection("users").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
@@ -61,11 +61,8 @@ console.log(logoUrl);
    let db = firebase.firestore();
 var dbUser = db.collection('users')
 .doc(user.uid).get().then(res => console.log(res.data()))
-// console.log(dbUser, dbUser.exists);
-// if (dbUser.exists) {
-//    console.log('document exists');
-// }else{
-//    console.log('document not found');
-// }
+.catch(console.log('no data found'))
+console.log(db.collection('users').doc(user.uid));
+
       }
     });
