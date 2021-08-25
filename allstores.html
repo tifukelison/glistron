@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>All Stores</title>
+	<link rel="stylesheet" href="assets/css/home.style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/allstores.css">
+</head>
+<body>
+	<div class="menu" onclick="openHomeDrawer();"><div class="logo">
+					<img src="assets/images/G.png" >
+					<h1>GLISTRON</h1>
+				</div>
+			</div>
+
+				<div class="body">
+					<div class="shift_welcome">
+						<div class="welcome">
+						<h1>Welcome &#x1f60f;</h1>
+						<p>This is where you'll find all the stores of different categories that you need.</p></div>
+					</div>
+					<div class="stores">
+						
+						
+					</div>
+				</div>
+	<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+<script type="text/javascript">
+  // Your web app's Firebase configuration
+
+  var firebaseConfig = {
+
+    apiKey: "AIzaSyBQUKunsqV8lK_TNzcZQBu5U7UDXMspdd8",
+
+    authDomain: "glistronv2.firebaseapp.com",
+
+    projectId: "glistronv2",
+
+    storageBucket: "glistronv2.appspot.com",
+
+    messagingSenderId: "622683501491",
+
+    appId: "1:622683501491:web:3fb4b3efc5ba17c49291c6"
+
+  };
+
+  // Initialize Firebase
+
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+<script type="text/javascript" src="assets/js/allstores.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.store {
+	text-align: center;
+	padding: 12px;
+	background: #795548;
+	width: 300px;
+	margin: 12px 23px;
+	color: white;
+}
+.store img {
+	border: 2px solid white;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.store p ,.store h1{
+	font-family: 'Nunito', sans-serif;
+	font-weight: bolder;
+
+}
+
+.stores {
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+}
+
+@media screen and (max-width: 1306px) {
+	.stores {
+		grid-template-columns: repeat(3, auto);
+	}
+	@media screen and (max-width: 934px) {
+		.stores {
+			grid-template-columns: repeat(2, auto);
+		}
+	@media screen and (max-width: 604px) {
+		.stores {
+			grid-template-columns: repeat(1, auto);
+		}
+		.store {
+			margin: auto auto 12px auto;
+		}
+		
+	}
+}

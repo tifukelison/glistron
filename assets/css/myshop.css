@@ -5,12 +5,15 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
-
+body{
+	background: url('../images/shoesbg.jpg');
+	
+}
 .header {
 display: flex;
 padding: 12px;
-background: linear-gradient(128deg,rgba(128,0,128, 0.4),  blanchedalmond, oldlace);
+background: #795548;
+/* background: linear-gradient(128deg,rgba(128,0,128, 0.4),  blanchedalmond, oldlace); */
 align-items: center;
 
 }
@@ -18,9 +21,9 @@ align-items: center;
 .store_img img{
 	object-fit: cover;
 width:200px;
-box-shadow: 2px 0px 22px 1px oldlace;
+/* box-shadow: 2px 0px 22px 1px #efebe9; */
 height:200px;
-border:  2px solid oldlace;
+border:  2px solid #3e2723;
 background-size:cover;
 background-position:center;
 border-radius:50%;}
@@ -31,7 +34,7 @@ transform: rotate3d(6,00, 0, 350deg);
 }
 .store_info h1,.p {
 
-	color: #333333;
+	color: #efebe9;
 	padding: 12px;
 	font-family: 'Nunito', sans-serif ;
 
@@ -84,12 +87,13 @@ border-radius: 12px 0px 0px 12px ;
 		padding: 2px;
 	}
 	.store_img1 {
-		/* border-radius: 12px 12px 0px 0px; */
+		border-radius: 12px 12px 0px 0px;
 	}
 	.box_aboutStore {
 		position: relative;
 		/* top: 420px; */
-		width: 402px;
+		width: 100%;
+		box-sizing: border-box;
 	/* 	right: 42%; */
 		display: block;
 		margin-left: 40px;
@@ -114,6 +118,10 @@ border-radius: 12px 0px 0px 12px ;
 	
 }
 @media screen and (max-width: 450px) {
+	.box_aboutStore img {
+		width: 100%;
+		
+	}
 	.box_aboutStore {
 		width: 302px;
 	}
@@ -159,6 +167,15 @@ border-radius: 12px 0px 0px 12px ;
 .page2{
 	font-family: 'Poppins',sans-serif;
 	text-align: center;
+
+}
+
+@media (max-width: 780px) {
+	.page2 {
+		position:  relative;
+	top: -500px;
+	z-index: 1;
+	}
 }
 .page2 label {
 	display: block;
@@ -176,6 +193,7 @@ border-radius: 12px 0px 0px 12px ;
 	border: none;
 	background: plum;
 	padding: 12px;
+	cursor: pointer;
 }
 .page2 button:active {
 	background: whitesmoke;
@@ -187,6 +205,7 @@ border-radius: 12px 0px 0px 12px ;
 	object-fit: cover;
 }
 .storeViewPost {
+	margin: 12px;
 	font-family: 'Nunito',sans-serif;
 	/* text-align: center; */
 	display: grid;
@@ -210,4 +229,13 @@ border-radius: 12px 0px 0px 12px ;
 		text-align: center;
 	}
 	
+}
+.storePost {
+	display: none;
+}
+.showPostyeah{
+	display: block;
+}
+.displayNot {
+	display: none;
 }

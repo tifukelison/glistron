@@ -37,7 +37,7 @@ firebase.auth().onAuthStateChanged((user) => {
     <div class="store_info1">
       <h1 class="store_name"><b>Store Name:</b> ${doc.storeName}</h1>
       <p class="store_tagline"><b>Store Catelog:</b> ${doc.storeCategory}</p>
-      <p class="store_description"><b>Store Description:</b> <br>${doc.storeDescription}</p>
+      <p class="store_description"><b>Store Description:</b> ${doc.storeDescription}</p>
       <div class="btns">
       <button class="edit_data"><a href="create_store.html">Edit</a></button>
       <button class="delete_data">Delete</button>
@@ -54,9 +54,14 @@ document.querySelector('.storeDeletedi').style.display = "block";
  })
  let img = document.querySelector('.openPop');
 img.addEventListener('click', ()=>{
-  console.log('box')
+
+
+  document.querySelector('.page2').classList.toggle('displayNot')
+    console.log('box')
   const box = document.querySelector('.box_aboutStore');
+
   box.classList.toggle('show_aboutStore');
+
 })
   })
 
@@ -92,7 +97,7 @@ task
   .then((url) => {
     let urlp = url;
 let db = firebase.firestore();
-var dbUser = db.collection('storePost-'+user.uid)
+var dbUser = db.collection('storePost').doc(user.uid).collection('posts')
 .add({
    postUrl: urlp,
     ItemPrice: item_price
@@ -112,7 +117,7 @@ console.log(url)
 firebase.auth().onAuthStateChanged((user)=>{
   if (user) {
     let db = firebase.firestore();
- db.collection("storePost-"+user.uid).get().then((querySnapshot) => {
+ db.collection("storePost").doc(user.uid).collection('posts').get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
          console.log(doc.id, " => ", doc.data());
    let div = document.querySelector('.storeViewPost');
@@ -131,4 +136,10 @@ firebase.auth().onAuthStateChanged((user)=>{
       
 });
   }
+})
+
+let theBtn = document.querySelector(".theBtn")
+theBtn.addEventListener('click', () =>{
+  console.log('works');
+  document.querySelector('.storePost').classList.toggle('showPostyeah');
 })
