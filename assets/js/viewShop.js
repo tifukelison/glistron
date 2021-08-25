@@ -96,9 +96,9 @@ task
   .then(snapshot => snapshot.ref.getDownloadURL())
   .then((url) => {
     let urlp = url;
-let db = firebase.firestore();
-var dbUser = db.collection('storePost').doc(user.uid).collection('posts')
-.add({
+let db = firebase.database();
+var dbUser = db.ref('storePost/' + user.uid + "/posts")
+.push({
    postUrl: urlp,
     ItemPrice: item_price
 
@@ -116,16 +116,17 @@ console.log(url)
 
 firebase.auth().onAuthStateChanged((user)=>{
   if (user) {
-    let db = firebase.firestore();
- db.collection("storePost").doc(user.uid).collection('posts').get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-         console.log(doc.id, " => ", doc.data());
+    let db = firebase.database();
+ db.ref("storePost/" + user.uid + "/posts").get().then((snapshot) => {
+    Object.keys(snapshot.val()).forEach((key) => {
+         console.log(snapshot.val()[key].postUrl);
+         console.log(snapshot.val()[key].ItemPrice);
    let div = document.querySelector('.storeViewPost');
     let data = ` 
       <div class="storeImagePost">
-        <img src="${doc.data().postUrl}" alt="storePost">
+        <img src="${snapshot.val()[key].postUrl}" alt="storePost">
       </div>
-      <p>Price: <span class="price">${doc.data().ItemPrice}</span>Frs</p>
+      <p>Price: <span class="price">${snapshot.val()[key].ItemPrice}</span>Frs</p>
     </div>
   `
   let divs = document.createElement('div');

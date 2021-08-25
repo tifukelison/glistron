@@ -8,9 +8,10 @@ let email = document.querySelector('.useremail').value;
   let password = document.querySelector('.userpass').value;
 firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
+     let username = document.querySelector('.username').value;
+  
     let database = firebase.database()
-  let username = document.querySelector('.username').value;
-      firebase.database().ref('users/' + user.uid).set({
+     database.ref('users/' + user.uid).set({
         name: username,
  uid: user.uid,
 email: user.email
