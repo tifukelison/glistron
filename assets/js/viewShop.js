@@ -116,26 +116,35 @@ console.log(url)
 
 firebase.auth().onAuthStateChanged((user)=>{
   if (user) {
-    let db = firebase.database();
- db.ref("storePost/" + user.uid + "/posts").get().then((snapshot) => {
-    Object.keys(snapshot.val()).forEach((key) => {
-         console.log(snapshot.val()[key].postUrl);
-         console.log(snapshot.val()[key].ItemPrice);
-   let div = document.querySelector('.storeViewPost');
+    let something = firebase.database().ref('storePost/' + user.uid + "/posts");
+    something.on('value', (snapshot)=>{
+      const data = snapshot.val();
+      console.log(data);
+      Object.keys(snapshot.val()).forEach((key)=> {
+        console.log(snapshot.val()[key].postUrl);
+         let div = document.querySelector('.storeViewPost');
     let data = ` 
       <div class="storeImagePost">
         <img src="${snapshot.val()[key].postUrl}" alt="storePost">
       </div>
-      <p>Price: <span class="price">${snapshot.val()[key].ItemPrice}</span>Frs</p>
+      <p class="priceh">Price: <span class="price">${snapshot.val()[key].ItemPrice}</span>Frs</p>
     </div>
   `
   let divs = document.createElement('div');
   divs.innerHTML = data;
   div.appendChild(divs)
          
-    });
+      })
+    })
+//     let db = firebase.database();
+//  db.ref("storePost/" + user.uid + "/posts").get().then((snapshot) => {
+//     Object.keys(snapshot.val()).forEach((key) => {
+//          console.log(snapshot.val()[key].postUrl);
+//          console.log(snapshot.val()[key].ItemPrice);
+  
+//     });
       
-});
+// });
   }
 })
 

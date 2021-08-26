@@ -4,6 +4,7 @@
   --l-gap: 10px;
   --g-gap: 15px;
   --c-w: 300px;
+  border-radius: 34px;
   --c-p: 10px;
   --bg:#e2e1eb;
   --c-bg: transparent;
@@ -22,6 +23,7 @@
   .skeleton::before, .skeleton::after {
     content: '';
     position: absolute;
+      border-radius: 34px;
     left: var(--c-p);
     top: var(--c-p);
     width: calc(100% - calc(var(--c-p) * 2));

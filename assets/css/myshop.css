@@ -52,10 +52,15 @@ border-radius: 12px 0px 0px 12px ;
 }
 .store_info1 {
 	font-family: 'Poppins';
-
+border-radius: 12px;
 	padding: 12px;
 }
-
+@media screen and (max-width: 700px){
+	.store_img1 img{
+		width: 200px;
+		height: 300px;
+	} 
+}
 .box_aboutStore {
 	opacity: 0;
 	pointer-events: none;
@@ -63,6 +68,7 @@ border-radius: 12px 0px 0px 12px ;
 	width: 800px;
 	position: absolute;
 	top: 30%;
+	/* border-radius: 12px; */
 	border-radius: 12px;
 	background: oldlace;
 	left: 20%;
@@ -78,6 +84,7 @@ border-radius: 12px 0px 0px 12px ;
 	/* display: flex; */
 	transition: 1.2s;
 	opacity: 1;
+	border-radius: 12px;
 	pointer-events: all;
 }
 @media screen and (max-width: 700px) {
@@ -86,7 +93,7 @@ border-radius: 12px 0px 0px 12px ;
 		margin: 2px;
 		padding: 2px;
 	}
-	.store_img1 {
+	.store_img1 img{
 		border-radius: 12px 12px 0px 0px;
 	}
 	.box_aboutStore {
@@ -112,6 +119,7 @@ border-radius: 12px 0px 0px 12px ;
 		position: relative;
 		margin: auto;
 		display: block;
+		border-radius: 12px;
 	top: 30%;
 	left: 1%;
 	}
@@ -198,6 +206,9 @@ border-radius: 12px 0px 0px 12px ;
 .page2 button:active {
 	background: whitesmoke;
 }
+.storeImagePost{
+	margin: 3px;
+}
 .storeImagePost img {
 
 	width: 300px;
@@ -211,13 +222,13 @@ border-radius: 12px 0px 0px 12px ;
 	display: grid;
 	grid-template-columns:auto auto auto auto;
 }
-@media (max-width: 918px) {
+@media (max-width: 1000px) {
 	.storeViewPost {
 		grid-template-columns: auto auto auto;
 	}
 	
 }
-@media (max-width: 682px) {
+@media (max-width: 700px) {
 	.storeViewPost {
 		grid-template-columns: auto auto;
 	}
@@ -238,4 +249,11 @@ border-radius: 12px 0px 0px 12px ;
 }
 .displayNot {
 	display: none;
+}
+.priceh{
+	font-weight: bolder;
+	background: #efeb34;
+	width: 200px;
+	margin: auto;
+	padding: 8px;
 }
