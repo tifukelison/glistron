@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged((user)=>{
   querySnapshot.forEach((doc)=>{
     postss.push(doc.data());  })
   console.log(postss);
-  for (var i = 7; i < postss.length; i++) {
+  for (var i = 3; i < postss.length; i++) {
     // console.log(postss[i].ItemLocation);
     let post= postss[i]
     let div3_box = document.querySelector('.four_cards');

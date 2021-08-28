@@ -74,3 +74,19 @@ span {
     position: absolute;
 
 }
+.blur {
+    -webkit-filter: blur(3px);
+}
+.successPost {
+    background: linear-gradient(128deg, rgba(225, 255,255, 0.9), rgba(220, 220, 220, 1.0));
+    text-align: center;
+   width: 400px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: 12px;
+   padding: 12px;
+   font-family: 'Nunito', sans-serif;
+   box-shadow: 0 0 12px 2px brown;
+}

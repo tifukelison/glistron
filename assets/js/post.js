@@ -41,7 +41,8 @@ task
 .catch((error) => {
     console.error("Error adding document: ", error);
 });
-
+document.querySelector('.successPost').style.display = "block";
+document.querySelector('.container').classList.add('blur');
     console.log(urlp)
   })
   .catch(console.error);

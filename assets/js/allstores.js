@@ -6,7 +6,7 @@ firebase.auth().onAuthStateChanged((user)=>{
          console.log(doc.id, " => ", doc.data());
    let div = document.querySelector('.stores');
     let data = ` 
-      <div class="store">
+      <div class="store animate__animated animate__fadeInUp">
               <img src="${doc.data().logoUrl}" alt='storeLogo' class="storeLogo">
               <h1>${doc.data().storeName}</h1>
               <p>${doc.data().storeDescription}</p>

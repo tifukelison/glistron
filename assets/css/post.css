@@ -76,3 +76,8 @@ body {
    
     background: linear-gradient(120deg, aqua, purple);;
 }
+.successPost {
+    background: white;
+    text-align: center;
+
+}

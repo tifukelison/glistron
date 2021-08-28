@@ -129,11 +129,18 @@ firebase.auth().onAuthStateChanged((user)=>{
       </div>
       <p class="priceh">Price: <span class="price">${snapshot.val()[key].ItemPrice}</span>Frs</p>
     </div>
+  <button class="deleteBtn">Delete</button>
   `
   let divs = document.createElement('div');
   divs.innerHTML = data;
   div.appendChild(divs)
-         
+  let del = document.querySelector('.deleteBtn')
+  del.addEventListener('click', deleteBtn)
+         function deleteBtn() {
+          firebase.database().ref('storePost/' + user.uid + "/posts" + snapshot.val()[key]).remove();
+            console.log('dataremoved');
+          // })
+         }
       })
     })
 //     let db = firebase.database();
