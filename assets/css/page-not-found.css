@@ -20,12 +20,11 @@ bottom: -180px;
 
 }
 .error_info h1, .broken_robo h1{
-	color: transparent;
-	background: url('/assets/images/homebg.jpg');
+	color: #5e2a16;
 	font-size: 90px;
 	background-size: contain;
 
-	background-clip: text;
+	/* background-clip: text; */
 }
 .goHome,.goHomes {
 	display: flex;
@@ -55,5 +54,5 @@ bottom: -180px;
 
 }
 .goHome a:active {
-
+background-color: aliceblue;
 }
