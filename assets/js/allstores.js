@@ -8,7 +8,7 @@ firebase.auth().onAuthStateChanged((user)=>{
     let data = ` 
       <div class="store animate__animated animate__fadeInUp">
               <img src="${doc.data().logoUrl}" alt='storeLogo' class="storeLogo">
-              <h1>${doc.data().storeName}</h1>
+              <h1><a href="selectedShop.html">${doc.data().storeName}</a></h1>
               <p>${doc.data().storeDescription}</p>
               <a href="https://wa.me/${doc.data().storeNumber}?text=Hi%20I%20am%20from%20Glistron%20I%20want%20to%20have%20a%20chat%20with%20you">${doc.data().storeNumber}</p>
             </div>
