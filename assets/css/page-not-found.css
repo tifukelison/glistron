@@ -56,3 +56,13 @@ bottom: -180px;
 .goHome a:active {
 background-color: aliceblue;
 }
+@media screen and (max-width: 600px) {
+	.body {
+		display: block;
+		margin: auto;
+		text-align:center;
+	}
+	body {
+		text-align: center;
+	}
+}
