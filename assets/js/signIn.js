@@ -1,35 +1,27 @@
 const signUp = () => {
-   document.querySelector('.succes_signup').classList.add('succes_signupu');
-
+  document.querySelector('.error-signup').innerHTML = ""
+ 
    let password = document.querySelector('.userpass').value;
   let userpass = document.querySelector('.confirmuserpass').value;
   if(userpass === password){
 let email = document.querySelector('.useremail').value;
   let password = document.querySelector('.userpass').value;
 firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-     let username = document.querySelector('.username').value;
-  
-    let database = firebase.database()
-     database.ref('users/' + user.uid).set({
-        name: username,
- uid: user.uid,
-email: user.email
-      }).catch(error => {
-        console.log(error.message)
-      })
-
-
-   console.log(user.uid)
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ..
-  });
+firebase.auth().onAuthStateChanged((user) => {
+  if(user){
+    let username = document.querySelector('.username').value;
+    let database = firebase.firestore()
+         database.collection('usersNm').doc(user.uid).set({
+            name: username,
+     uid: user.uid,
+    email: user.email
+          })
+  }
+})
+document.querySelector('.succes_signup').classList.add('succes_signupu');
 
 }else {
-  
+  document.querySelector('.error-signup').innerHTML = "Passwords do not match."
   }
 }
   
@@ -70,7 +62,7 @@ const googleAuth = () => {
 
   auth.signInWithPopup(googleProvider)
   .then(()=>{
-   window.location.assign('index')
+   window.location.assign('index.html')
   })
   .catch((error)=>{
     console.error(error)

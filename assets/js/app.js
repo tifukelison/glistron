@@ -34,8 +34,12 @@ firebase.auth().onAuthStateChanged((user) => {
     // https://firebase.google.com/docs/reference/js/firebase.User
     var uid = user.uid;
     console.log(uid)
-    document.querySelector('.useremail').innerHTML = `${user.email}`
-     let db = firebase.firestore();
+    let db = firebase.firestore();
+     db.collection("usersNm").doc(user.uid).get().then((docs)=>{
+      console.log(docs.data());
+      document.querySelector('.useremail').innerHTML = `${docs.data().name}`;
+    
+     })
  db.collection("posts").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
 // console.log(doc.data())
