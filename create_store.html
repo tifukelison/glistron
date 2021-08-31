@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create store</title>
-    <link rel="stylesheet" href="assets/css/create_store.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create store</title>
+  <link rel="stylesheet" href="assets/css/create_store.css">
 </head>
+
 <body>
- 
-    <div class="container">
-        <div class="head"> 
-          <h1 style="text-align: center;">Create Your Ideal Store</h1>
-        </div>
-        <form action="">
-            <div class="right">
-            <label for="store">Store Name:</label>
-            <input type="text" placeholder="Store name" class="store_name"><br><br>
 
-            <label for="store pass">Store Description:</label>
-            <input type="text" class="store_description" placeholder="Store Description"><br><br>
-
-            <label for="location">Location:</label>
-            <input type="text" class="store_location" placeholder="Store Location e.g Douala, Yaounde etc."><br><br>
-
-
-            <label for="tel">Phone Number:</label>
-            <input type="tel" class="store_number" placeholder="Enter your phone number starting with your country code"><br><br>
-
-            <label for="category">Category:</label>
-            <input class="category" type="text" placeholder="Category (Maximum 3)."><br>
-            <label for="category"> <span>E.g Cars, Fashion, Pastries, Computers, Accessories etc.</span> </label><br><br>
-
-            <label for="file">STORE LOGO:</label><br>
-            <input type="file" class="store_logo" id="file"><br><br>
-
-            <button class="createStoreBtn">Create Store</button><br><br>
-
-            <div class="alt">Already have a Store? <a href="myshop.html">Continue to Store</a></div>
-          </div>
-          </form>
-        
+  <div class="container">
+    <div class="head">
+      <h1 style="text-align: center;">Create Your Ideal Store</h1>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <form action="">
+      <div class="right">
+        <label for="store">Store Name:</label>
+        <input type="text" placeholder="Store name" class="store_name"><br><br>
+
+        <label for="store pass">Store Description:</label>
+        <input type="text" class="store_description" placeholder="Store Description"><br><br>
+
+        <label for="location">Location:</label>
+        <input type="text" class="store_location" placeholder="Store Location e.g Douala, Yaounde etc."><br><br>
 
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+        <label for="tel">Phone Number:</label>
+        <input type="tel" class="store_number"
+          placeholder="Enter your phone number starting with your country code"><br><br>
+
+        <label for="category">Category:</label>
+        <input class="category" type="text" placeholder="Category (Maximum 3)."><br>
+        <label for="category"> <span>E.g Cars, Fashion, Pastries, Computers, Accessories etc.</span> </label><br><br>
+
+        <label for="file">STORE LOGO:</label><br>
+        <input type="file" class="store_logo" id="file"><br><br>
+
+        <button class="createStoreBtn">Create Store</button><br><br>
+
+        <div class="alt">Already have a Store? <a href="myshop.html">Continue to Store</a></div>
+      </div>
+    </form>
+
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
 
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
-<script type="text/javascript">
-  // Your web app's Firebase configuration
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+  <script type="text/javascript">
+    // Your web app's Firebase configuration
 
-  var firebaseConfig = {
+    var firebaseConfig = {
 
-    apiKey: "AIzaSyBQUKunsqV8lK_TNzcZQBu5U7UDXMspdd8",
+      apiKey: "AIzaSyBQUKunsqV8lK_TNzcZQBu5U7UDXMspdd8",
 
-    authDomain: "glistronv2.firebaseapp.com",
+      authDomain: "glistronv2.firebaseapp.com",
 
-    projectId: "glistronv2",
+      projectId: "glistronv2",
 
-    storageBucket: "glistronv2.appspot.com",
+      storageBucket: "glistronv2.appspot.com",
 
-    messagingSenderId: "622683501491",
+      messagingSenderId: "622683501491",
 
-    appId: "1:622683501491:web:3fb4b3efc5ba17c49291c6"
+      appId: "1:622683501491:web:3fb4b3efc5ba17c49291c6"
 
-  };
+    };
 
-  // Initialize Firebase
+    // Initialize Firebase
 
-  firebase.initializeApp(firebaseConfig);
-
-</script>
-<script type="text/javascript" src="assets/js/createStore.js"></script>
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script type="text/javascript" src="assets/js/createStore.js"></script>
 </body>
+
 </html>
