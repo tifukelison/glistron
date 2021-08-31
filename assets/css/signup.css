@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 * {
 	margin:  0;
 	padding: 0;
@@ -24,7 +24,7 @@
 label {
 	display: block;
 	font-weight: bolder;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	padding: 8px 0px 0 0;
 }
 .sign_in-form input, .sign_up-form input {
@@ -32,11 +32,12 @@ label {
 	width:  300px;
 	padding: 10px 0;
 	cursor: pointer;
+	font-family: 'Poppins', sans-serif;
 	margin: 12px 0;
 }
 .sign_in-form form button , .sign_up-form  button{
 	margin: 26px 0 0 0;
-	padding: 10px 20px;
+	padding: 10px 20px;	font-family: 'Poppins', sans-serif;
 	cursor: pointer;
 
 width: 300px;
@@ -55,8 +56,9 @@ background-color: wheat;
 	background: #333333;
 	color: white;
 	text-align: center;
-	padding: 9px; 
-	opacity: 0;
+	padding: 19px; 
+	/* opacity: 0; */
+	display:none;
 	font-family: 'Raleway';
 	border: 1px solid green; 
 	border-radius: 22px;
@@ -66,35 +68,11 @@ background-color: wheat;
 	transform: rotateX(360deg);
 	/* animation: fall 2s ease-in alternate; */
 }.succes_signupu,.succes_signinI{
-	opacity: 1;
+	display:block;
 	transform: rotateX(360deg);
 }
-/* @keyframes  fall {
-	from{
-		margin-left: 35%;
-		margin-top: -20%;
-		transform: rotateY(0deg);
 
-	}
-	to {
-		margin-left: 35%;
-		transition: 1s;
-		margin-top: 0;
 
-		transform: rotateY(360deg) scale(3, 2)
-
-	} */
-	
-/* } */
-.succes_signin .close , .succes_signup .close{
-	position: absolute;
-	font-size: 20px;
-	border: 2px solid red;
-	border-radius: 50%;
-	cursor: pointer;
-
-	padding: 3px 10px;
-}
 .error-signup {
 	font-family: 'Raleway';
 	font-size: 23px;
@@ -107,7 +85,7 @@ background-color: wheat;
 .googleAuth,.facebookAuth,.twitterAuth {
 	/* border: 2px solid black; */
 	/* border-radius: 50%; */
-	color: whit;
+	color: white;
 	/* padding: 8px; */
 	font-size: 34px;
 	cursor: pointer;

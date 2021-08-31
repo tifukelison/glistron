@@ -28,6 +28,8 @@ const signUp = () => {
 
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
+    document.querySelector('.succes_signup').style.display = "none";
+
     document.querySelector('.sign_up-form').style.display = "none"
     console.log(user.uid)
     console.log(user.email)
