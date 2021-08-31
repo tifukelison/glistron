@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Hina+Mincho&display=swap');
+h1, h2{
+  font-family: 'Almendra Display', cursive;
+}
+p {
+  font-family: 'Hina Mincho', serif;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.about p,
+.kel p,
+.lein p,
+.aim p  {
+  font-size: 140%;
+}
+.aim {
+  text-align: center;
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  .team {
+      display: flex;
+
+  }
+
+  h1, h2 {
+      text-align: center;
+  }
+  /* .container h1 {
+      font-size: 60px;
+  } */
+  @media screen and (max-width: 700px) {
+    .card {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      /* box-shadow: ; */
+    }
+    .team {
+        display:block;
+  
+    }
+  }
+  
+  .card2 {
+      height: 50%;
+  }
